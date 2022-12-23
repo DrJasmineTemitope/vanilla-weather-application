@@ -16,3 +16,21 @@ body {
   border: 1px solid #6f7985;
   border-radius: 7px;
 }
+
+h1 {
+  color: #6f7985;
+  font-weight: 100;
+  line-height: 28px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 18px;
+  color: #6f7985;
+}
