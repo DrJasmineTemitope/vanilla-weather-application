@@ -6,7 +6,7 @@ function displayTemperature(response) {
 
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#weather-description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 }
 
 let apiKey = "f029b2b922567275529f515833feaaac";
