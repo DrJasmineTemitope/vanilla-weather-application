@@ -31,6 +31,10 @@ li {
   color: #6f7985;
 }
 
+li::first-letter {
+  text-transform: capitalize;
+}
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 60px auto;
