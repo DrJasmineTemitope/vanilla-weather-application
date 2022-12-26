@@ -74,6 +74,7 @@ function displayFahrenheitValue(event) {
 
 function displayCelsiusValue(event) {
   event.preventDefault();
+
   document.querySelector("#temperature").innerHTML = celsiusTemperature;
 }
 
