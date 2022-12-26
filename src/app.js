@@ -49,7 +49,7 @@ function displayTemperature(response) {
     .querySelector("#icons")
     .setAttribute("alt", response.data.weather[0].description);
 
-  celciusTemperature = Math.round(response.data.main.temp);
+  celsiusTemperature = Math.round(response.data.main.temp);
 }
 
 function search(city) {
@@ -68,15 +68,16 @@ function searchcity(event) {
 function displayFahrenheitValue(event) {
   event.preventDefault();
 
-  let fahrenheit = (celciusTemperature * 9) / 5 + 32;
+  let fahrenheit = (celsiusTemperature * 9) / 5 + 32;
   document.querySelector("#temperature").innerHTML = Math.round(fahrenheit);
 }
 
 function displayCelsiusValue(event) {
   event.preventDefault();
+  document.querySelector("#temperature").innerHTML = celsiusTemperature;
 }
 
-let celciusTemperature = null;
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchcity);

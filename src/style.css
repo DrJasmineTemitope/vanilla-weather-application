@@ -35,6 +35,9 @@ li::first-letter {
   text-transform: capitalize;
 }
 
+a {
+  text-decoration: none;
+}
 .weather-app-wrapper {
   max-width: 600px;
   margin: 60px auto;
@@ -58,9 +61,14 @@ li::first-letter {
 
 .weather-temperature .units {
   position: relative;
-  top: -34px;
+  top: -4px;
   font-size: 16px;
   margin-left: 0;
+}
+
+.weather-temperature .active {
+  color: #6f7985;
+  cursor: default;
 }
 
 .search {
