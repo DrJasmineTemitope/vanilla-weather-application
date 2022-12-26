@@ -63,7 +63,17 @@ function searchcity(event) {
   search(city.value);
 }
 
+function displayFahrenheitValue(event) {
+  event.preventDefault();
+
+  let fahrenheit = (-4 * 9) / 5 + 32;
+  document.querySelector("#temperature").innerHTML = Math.round(fahrenheit);
+}
+
 search("New York");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchcity);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", displayFahrenheitValue);
