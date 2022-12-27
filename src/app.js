@@ -20,6 +20,31 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+function displayWeatherForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["wed", "thur", "fri", "sat", "sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+                    <div class="col-2">
+                  <div id="forecast-days">${day}</div>
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                    alt=""
+                  />
+                  <div class="forecast-temperature">
+                    <span class="forecast-temperature-max"> 18º</span>
+                    <span class="forecast-temperature-min">12º</span>
+                  </div>
+                                    </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function displayTemperature(response) {
   console.log(response);
@@ -89,4 +114,5 @@ fahrenheit.addEventListener("click", displayFahrenheitValue);
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", displayCelsiusValue);
 
+displayWeatherForecast();
 search("New York");
