@@ -29,16 +29,20 @@ function displayWeatherForecast() {
     forecastHTML =
       forecastHTML +
       `
+      
                     <div class="col-3">
+                    <div class="card" style="width: 7rem;">
                   <div id="forecast-days">${day}</div>
                   <img
                     src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
                     alt=""
+                    width="40"
                   />
                   <div class="forecast-temperature">
                     <span class="forecast-temperature-max"> 18º</span>
                     <span class="forecast-temperature-mini">12º</span>
                   </div>
+                                    </div>
                                     </div>`;
   });
 
