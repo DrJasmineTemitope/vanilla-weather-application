@@ -75,7 +75,8 @@ a {
   margin-bottom: 20px;
 }
 
-#weather-forecast {
+#weather-forecast,
+.card {
   text-align: center;
 }
 
