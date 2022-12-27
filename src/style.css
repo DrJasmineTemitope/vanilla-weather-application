@@ -78,3 +78,8 @@ a {
 #weather-forecast {
   text-align: center;
 }
+
+.forecast-temperature-mini,
+#forecast-days {
+  color: #6f7985;
+}

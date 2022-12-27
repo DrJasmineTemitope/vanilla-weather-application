@@ -37,7 +37,7 @@ function displayWeatherForecast() {
                   />
                   <div class="forecast-temperature">
                     <span class="forecast-temperature-max"> 18º</span>
-                    <span class="forecast-temperature-min">12º</span>
+                    <span class="forecast-temperature-mini">12º</span>
                   </div>
                                     </div>`;
   });
