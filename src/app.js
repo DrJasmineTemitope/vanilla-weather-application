@@ -43,6 +43,7 @@ function displayWeatherForecast(response) {
         `
       
                     <div class="col-2">
+                    <div class="card" style="width: 5rem;" id="forecast-card">
                     
                   <div id="forecast-days">${formatDay(forecastDay.dt)}</div>
                   <img
@@ -59,6 +60,7 @@ function displayWeatherForecast(response) {
                     <span class="forecast-temperature-mini"> ${Math.round(
                       forecastDay.temp.min
                     )}º</span>
+                  </div>
                   </div>
                                                                         </div>`;
     }
