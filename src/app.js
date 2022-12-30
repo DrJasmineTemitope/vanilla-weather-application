@@ -147,4 +147,4 @@ fahrenheit.addEventListener("click", displayFahrenheitValue);
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", displayCelsiusValue);
 
-search("New York");
+search("Ibadan");
