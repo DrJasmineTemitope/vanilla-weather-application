@@ -20,6 +20,15 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+
+  return days[day];
+}
+
 function displayWeatherForecast(response) {
   console.log(response.data.daily);
   let forecast = response.data.daily;
@@ -27,14 +36,15 @@ function displayWeatherForecast(response) {
 
   let forecastHTML = `<div class="row">`;
 
-  forecast.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
       
-                    <div class="col-3">
+                    <div class="col-2">
                     
-                  <div id="forecast-days">${forecastDay.dt}</div>
+                  <div id="forecast-days">${formatDay(forecastDay.dt)}</div>
                   <img
                     src="https://openweathermap.org/img/w/${
                       forecastDay.weather[0].icon
@@ -51,6 +61,7 @@ function displayWeatherForecast(response) {
                     )}º</span>
                   </div>
                                                                         </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
