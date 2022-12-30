@@ -47,6 +47,7 @@ a {
   padding: 20px;
   border: 1px solid #6f7985;
   border-radius: 7px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
 }
 
 .overview {
