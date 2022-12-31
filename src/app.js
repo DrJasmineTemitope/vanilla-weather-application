@@ -77,7 +77,6 @@ function getForecast(coordinates) {
 }
 
 function displayTemperature(response) {
-  console.log(response);
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
